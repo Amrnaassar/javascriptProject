@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Web2 JavaScript Project "Tic Tac Toe"</title>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="style.css">
+        <link rel="shorteut icon" href="logo.jpg"/>
+    </head>
+    <body>
+	    <div class="game-area">
+		    <div class="background_color">
+				<button class="red" type="button" onclick="changeBodyBg('red');">Red</button>
+				<button class="lime" type="button" onclick="changeBodyBg('lime');">Lime</button>
+				<button class="yellow" type="button" onclick="changeBodyBg('yellow');">Yellow</button>
+				<button class="green" type="button" onclick="changeBodyBg('green');">Green</button>
+				<button class="blue" type="button" onclick="changeBodyBg('blue');">Blue</button>
+			</div>
+			<div class="game-options">
+			    <select name="game_type" id="game_type" onchange="resetAIButton()">
+				    <option value="3">3 x 3 Board</option>
+				    <option value="4">4 x 4 Board</option>
+				    <option value="5">5 x 5 Board</option>
+				</select>
+				<select name="color_x_o" id="color_x_o" onchange="resetAIButton()">
+				    <option value="1">X Green And O Red</option>
+					<option value="2">X Blue And O Yellow</option>
+					<option value="3">X Red And O Blue</option>
+				</select>
+				<input type="checkbox" name="robot" checked="true" id="robot"> With Computer?
+				<br/>
+			    <input type="submit" value="Start Game" onclick="generateGame()" class="submit-button"> 
+		    </div>
+		    <div id="game-board" class="game-board">
+			    Please select your game and colers of X and O from above, then press 'Start Game'.
+		    </div>
+		    <div class="score-card">
+				Player X Score: <span id="score-X">0</span>
+				<br>
+			    Player O Score: <span id="score-O">0</span>
+		    </div>
+        </div>
+        <script type="text/javascript" src="scripts.js"></script>
+    </body>
+</html>
